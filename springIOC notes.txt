@@ -8,7 +8,7 @@ Example:- of Lightweight and Heavy weight
 2)swing is light weight as it only depend on JDK
 3)EJB is heavy weight as it depends on application server.
 4)spring is light weight as it depends on spring jar files + JDK
-Spring is build on 2 principles 1)Runtime Polymorphism (function over-ridding)2)Has-A relationship
+Spring is build on 2 principles 1)Runtime Polymorphism 2)Has-A relationship
 Spring says instead of Inheritance use Has-A relationship. 
 
 function overloading 
@@ -31,7 +31,7 @@ ________________________________________
 The Dependency Injection makes easier to test the application. The EJB or Struts application require server to run the application but Spring framework doesn't require server.
 ________________________________________
 4) Lightweight
-Spring framework is lightweight because of its POJO(plain old java object) implementation. The Spring Framework doesn't force the programmer to inherit any class. 
+Spring framework is lightweight because of its POJO implementation. The Spring Framework doesn't force the programmer to inherit any class. 
 ________________________________________
 5) Fast Development
 The Dependency Injection feature of Spring Framework and it support to various frameworks makes the easy development of JavaEE application.
@@ -80,7 +80,7 @@ S.O.P("hello world");
 2)spring.xml
 dtd/xsd
 <beans>
-<bean class="Test" id="springobject">
+<bean class="Test" id="t">
 </bean>
 <beans>
 ------------------------------------
@@ -92,8 +92,8 @@ public static void main(String args[])
 //read the .xml file from the given path
 Resource r=new classpathResource("spring.xml");
 BeanFactory factory=new XmlBeanFactory(r);
-Test t1=(Test)factory.getBean("springobject");
-t1.hello();
+Test t=(Test)factory.getBean("t");
+t.hello();
 }}
 ----------------------------------------------------------------
 Example 2:- setter Injection

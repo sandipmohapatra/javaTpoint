@@ -1,0 +1,96 @@
+MVC
+------------
+model view controller support presentation part to model part.
+
+view ---html/jsp
+controller ---having pojo class
+model ----having service+bussiness +DAO all have pojo class.
+we have IOC and WEB application container for handling the controller and model.
+
+Here the controller is known as front controller.
+It can support multiple view at a time.
+It it also known as multi action controller.
+Form validation can be done by the controller.
+It is known as view Resolvers because multiple view request can be handled by one single controller.
+
+Front controller name in spring is Dispacter servlet.
+Front controller name in struts is Action servlet.
+Front controller name in JSF is Faces servlet.
+
+multi action input will be mapped to the front controller.
+
+we have 3 .jsp forms (reg,getdata,login) and dispatcher servlet
+
+web.xml
+-------------------
+<web-app>
+<servlet>
+<servlet-name>ds</servlet-name>
+<servlet-class>org.springframework.webservlet.DispatcherServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>ds</servlet-name>
+<url-pattern>/reg</url-pattern>
+<url-pattern>/getdata</url-pattern>
+<url-pattern>/login</url-pattern>
+or
+<url-pattern>/*</url-pattern>
+</servlet-mapping>
+</web-app>
+ 
+ -----------------------------------------------
+x.ext will be recommended for multiple framework.
+*.do for for struts 1.x
+*.action for struts 2.x
+in spring there is no extention.
+
+different controllers are
+1)Controller(Interface)
+2)AbstractCommand
+3)AbstractController
+4)simpleForm
+5)AbstractWizardform
+6)MultiActionForm
+------------------
+sterotype :-@controller
+--------------------------------
+example :-
+hello.html
+----------------
+name --->submit
+---------------------
+Hellocontroller(interface)
+------------------------------
+public ModelAndView handleRequest(HttpServletRequest rq,HttpServletResponse rs)throws Exception
+{
+String name=rq.getParameter("name");
+Map m=new HashMap();
+m.put("msg","Hello"+name);
+return new ModelAndView("success");
+}
+---------------------------------------------------
+web.xml
+-------------------
+<web-app>
+<servlet>
+<servlet-name>ds</servlet-name>
+<servlet-class>org.springframework.webservlet.DispatcherServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>ds</servlet-name>
+<url-pattern>/*.htm</url-pattern>
+</servlet-mapping>
+</web-app>
+ 
+ -----------------------------------
+dispatcher_servlet.xml(this should be same name of the servlet.to map betwen web.xml and controller we write this.
+------------------------------
+<beans>
+<bean name="/hello.htm" class="hellocontroller/>
+*bean class is internal resource and called view resolver or helper class.
+<property name="prefix" value="input"/>
+<property name="suffix" value="output"/>
+ </bean>
+</beans>

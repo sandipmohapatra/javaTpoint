@@ -1,0 +1,70 @@
+Aspect oriented programing:-
+--------------------------------------------------------
+Aspect means service.we will add aspect to bussiness.
+Advice is service provider
+PointCut -point or condition to execute the service/Aspect for our bussiness methods.
+
+example:- bank
+1)deposite-Transaction before and after
+2)withdraw-Transaction before and after
+3)findBal-No Transaction
+4)calculateInterest-No Transaction
+
+Advicer - pointcut with advice combination
+(pointcut+advice)
+
+proxy is a weaver
+ proxy <------service + bussiness
+finally proxy will give proxy object.
+
+there are 3 approch of AOP
+1)programatic
+2)declarative(XML)
+3)@Anotation
+
+programatic Approch we have 4 advice
+1)Method before Advice
+2)Method after Advice
+3)Method Intersepter(before and after)
+4)Throws Advice
+
+
+controller <--------AOP<-------Service +Bussiness
+
+class Bank
+{
+int amt=5000;
+String name="ABC";
+public int deposite(int amt,String name)
+{
+if(name.equals("ABC"))
+{
+this.amt=this.amt+deposite;
+return this.amt;
+}
+else
+{
+return 0;
+}}}
+
+---------------------------------
+class Logbefore implements MethodBeforeAdvice
+{
+public void before()
+{}
+}
+-----------------------------
+main class:-
+{
+ProxyFactoryBean pfb=new ProxyFactoryBean();
+pfb.setTarget();
+pfb.setInterceptorName(String[] name);
+Bank b=new Bank();<-----Target
+Logbefore l=new Logbefore();<----Advice
+Bank proxy=pfb.getObject();//object will return to the bank class.
+proxy.deposite(1000,102);
+s.o.p(amt)
+}
+ 
+
+

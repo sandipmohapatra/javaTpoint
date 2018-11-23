@@ -45,7 +45,7 @@ We can perform all the database operations by the help of JdbcTemplate class suc
 
 The DriverManagerDataSource is used to contain the information about the database such as driver class name, connnection URL, username and password.
 
-There are a property named datasource in the JdbcTemplate class of DriverManagerDataSource type. So, we need to provide the reference of DriverManagerDataSource object in the JdbcTemplate class for the datasource property.
+There are  property named datasource in the JdbcTemplate class of DriverManagerDataSource type. So, we need to provide the reference of DriverManagerDataSource object in the JdbcTemplate class for the datasource property.
 
 Methds of  JdbcTemplate class:- 
 1)public int update(String query):-is used to insert, update and delete records.
