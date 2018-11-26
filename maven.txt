@@ -1,0 +1,57 @@
+Maven (apache maven)
+-------------------------------------------
+maven project --->pom.xml(project object model)-->set the version of jars required 
+it will automatically download and add the jar files.
+1)previous to maven we used ant tool.
+2)Maven has it own Repository
+i)local ii)central
+3)it resolve problem of adding jars to each project
+4)it resolves the problem of creating correct folder structure
+5)creating war files or jar jars  
+---------------------------------------------------------------
+pom.xml
+---------------------------------------------------------------
+1)project :-It is the root of pom.xml
+
+2)model version:-it is the sub element of project.it specifies the pom.xml version 4.0.0.
+
+3)groupid:-it is the sub element of project.it specifies the project group.(com.sandip.spring)
+
+4)artifactId:-it is the sub element of project.the project will be created by this name.The jar files and war files will also be created by this name.
+
+5)version:-it is the sub element of project.This is the project version.(example:- 1.2.1)
+
+6)packaging :-defines packaging type :- (war or jar).
+
+7)name :- defines name of the maven project.
+
+8)<dependencies>
+<dependency>
+
+<dependency>
+<dependency>
+
+<dependency>
+</dependencies>
+--------------------------------
+folder structure of maven project :-
+--------------------------------------------------
+springcore2:-
+src/main/java :-.java files will be stored here.
+src/main/resources:- images,supporting files
+src/test/java :- junit tests
+src/test/resources:- supporting files.
+Maven Dependencies :- the jars will be downloaded and stored in the local machine.
+src:-same as your working folder   
+pom.xml :- here we have to write the dependencies required.
+
+---------------------------------------------------------------
+
+spring mvc :- jar (core,web,mvc) 
+--------------------------------------------------------------------
+file-->new-->maven project--->click on (create simple project)
+----------------------------
+Group id:com.sandip.spring
+Artifact Id:springcore5
+version:1.0.0
+packaging:jar/war 
