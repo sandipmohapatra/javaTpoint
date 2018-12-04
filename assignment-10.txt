@@ -1,0 +1,13 @@
+Q1) Define spring IOC.define types and different containers used.
+
+Q2)Define spring MVC and define the flow and its use .
+
+Q3)What is the use of Spring test and spring security module.
+
+Q4)write the difference between SOAP and Restful webservice.
+
+Q5)Write 3 methods in SOAP and display it
+
+i)square of a no,cube of a no and  prime of a number.
+
+
