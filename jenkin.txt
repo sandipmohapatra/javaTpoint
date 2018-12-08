@@ -1,0 +1,28 @@
+Jenkin
+---------
+steps to upload your project into jenkin.
+
+1)git push origin master
+
+2)create now jobs
+
+3)pipeline ---->
+write description about the project
+github link paste
+build the project
+goto the dashboard to view.
+
+----------------------------------------------
+frontend :- AngularJs :- component.spec.ts (test case)
+middle ware :- Nodejs
+backend :- Mysql
+-------------------------------------------------
+deployment 
+git/github
+jenkin
+-----------------------------------------
+
+
+
+ 
+
